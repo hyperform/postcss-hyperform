@@ -1,0 +1,36 @@
+{
+  "name": "postcss-hyperform",
+  "version": "0.1.0",
+  "description": "Rewrite CSS pseudo-classes into Hyperform classes",
+  "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "ava"
+  },
+  "author": "Manuel Strehl",
+  "license": "MIT",
+  "dependencies": {
+    "postcss": "^5.0.14"
+  },
+  "devDependencies": {
+    "ava": "^0.16.0"
+  },
+  "ava": {
+    "require": [
+      "babel-register"
+    ],
+    "babel": "inherit"
+  },
+  "babel": {
+    "presets": [
+      "es2015",
+      "stage-2"
+    ],
+    "plugins": [
+      "espower",
+      "transform-runtime"
+    ]
+  }
+}
