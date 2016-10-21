@@ -25,6 +25,10 @@ Then use it:
 
     postcss([ require('postcss-hyperform') ])
 
+or on the command-line:
+
+    $ postcss --use postcss-hyperform < input.css > output.css
+
 This will transform this perfectly standards-conform code (that is,
 unfortunately, not fully supported by any browser as of 2016)
 
