@@ -16,21 +16,5 @@
   },
   "devDependencies": {
     "ava": "^0.16.0"
-  },
-  "ava": {
-    "require": [
-      "babel-register"
-    ],
-    "babel": "inherit"
-  },
-  "babel": {
-    "presets": [
-      "es2015",
-      "stage-2"
-    ],
-    "plugins": [
-      "espower",
-      "transform-runtime"
-    ]
   }
 }

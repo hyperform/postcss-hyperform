@@ -1,7 +1,7 @@
 'use strict';
 
 
-import postcss from 'postcss';
+const postcss = require('postcss');
 
 
 function updateSelector(selector) {
@@ -13,7 +13,7 @@ function updateSelector(selector) {
 }
 
 
-export default postcss.plugin('postcss-hyperform', (options = {}) => {
+module.exports = postcss.plugin('postcss-hyperform', (options = {}) => {
   return root => {
     root.walkRules(rule => {
       rule.walkDecls(decl => {
