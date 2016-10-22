@@ -10,10 +10,13 @@ Currently supported pseudo-classes and their transformation:
 
 | CSS selector    | Class applied by Hyperform |
 | --------------- | -------------------------- |
-| `:user-error`   | `.hf-validated.hf-invalid` |
-| `:user-invalid` | `.hf-validated.hf-invalid` |
+| `:user-error`   | `.hf-user-invalid`         |
+| `:user-invalid` | `.hf-user-invalid`         |
+| `:user-valid`   | `.hf-user-valid`           |
 | `:invalid`      | `.hf-invalid`              |
 | `:valid`        | `.hf-valid`                |
+| `:in-range`     | `.hf-in-range`             |
+| `:out-of-range` | `.hf-out-of-range`         |
 
 ## Installation and Usage
 
@@ -55,11 +58,8 @@ Hyperform:
 
 ## Problems and Todos
 
-*   The specificity of `:user-invalid` is lower than that of the two
-    replacement classes
-*   Missing support for `:in-range`, `:out-of-range`, `:required`, `:optional`.
-    They will be added when [this accompanying
-    issue](https://github.com/hyperform/hyperform/issues/23) is fixed.
+*   Missing support for `:required` and `:optional`. They will be added when
+    [this accompanying issue](https://github.com/hyperform/hyperform/issues/23) is fixed.
 
 ## Authors
 
