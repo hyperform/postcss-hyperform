@@ -33,7 +33,7 @@ or on the command-line:
     $ postcss --use postcss-hyperform < input.css > output.css
 
 This will transform this perfectly standards-conform code (that is,
-unfortunately, not fully supported by any browser as of 2016)
+unfortunately, not fully supported by any browser as of 2018)
 
 ```css
 .input:valid {
@@ -60,6 +60,17 @@ Hyperform:
 
 *   Missing support for `:required` and `:optional`. They will be added when
     [this accompanying issue](https://github.com/hyperform/hyperform/issues/23) is fixed.
+*   Note, that the specificity of some selectors will change. Where you had a blue colored field on focus with this CSS before,
+
+        .input:user-invalid { color: red; }
+        .input:focus { color: blue; }
+        
+    you now need to crank up the specificity of the `:focus` rule,
+    
+        .input:user-invalid { color: red; }
+        /* :user-invalid will become two helper classes in postprocessing. Therefore
+         * enlarge specificity: */
+        .input:focus:focus { color: blue; }
 
 ## Authors
 
